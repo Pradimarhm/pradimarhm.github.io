@@ -211,7 +211,7 @@ const App = () => {
               <div className="flex shrink-0 items-center gap-1">
                 <img
                   alt="Pradima_Creative"
-                  src="./src/assets/logo-nobg2_3.webp"
+                  src="../images/logo-nobg2_3.webp"
                   className="h-12 w-auto"
                 />
                 <h2 className='text-sm font-semibold text-brand-900'>Pradima_Creative Porto</h2>

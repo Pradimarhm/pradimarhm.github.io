@@ -2,97 +2,99 @@ import { Description } from "@headlessui/react";
 import Ballpit from '../components/bg/Ballpit.component'
 // import { Tooltip } from 'flowbite-react';
 
+const pathImage = "../images"
+
 const skillCard = [
   { 
     name: 'Graphic Designer', 
-    imageUrl: './src/assets/techStack/Sampul/GP.png', 
-    techStack: ['./src/assets/techStack/Affinity.svg','./src/assets/techStack/Canva.svg','./src/assets/techStack/Figma.svg'], 
+    imageUrl: pathImage+'/techStack/Sampul/GP.png', 
+    techStack: ['../images/techStack/Affinity.svg','../images/techStack/Canva.svg','../images/techStack/Figma.svg'], 
     Description: 'Membuat Desain Poster, Banner, Display Videotron pada Event dan Bisa membuat Desain Sosial Media seperti Feed, Story Instagram, Twibbon, Thumbnail.'},
   { 
     name: 'UI/UX Design', 
-    imageUrl: './src/assets/techStack/Sampul/UIUX.png', 
-    techStack: ['./src/assets/techStack/Figma.svg',], 
+    imageUrl: '../images/techStack/Sampul/UIUX.png', 
+    techStack: ['../images/techStack/Figma.svg',], 
     Description: 'Mendesain Tampilan Website dengan pendekatan Mobile First Design dan Mendesain Aplikasi Mobile'
   },
   { 
     name: 'Front End', 
-    imageUrl: './src/assets/techStack/Sampul/CODE.png', 
-    techStack: ['./src/assets/techStack/Html.svg','./src/assets/techStack/CSS.svg','./src/assets/techStack/Javascript.svg','./src/assets/techStack/Gsap.svg','./src/assets/techStack/TailwindCss.svg'], 
+    imageUrl: '../images/techStack/Sampul/CODE.png', 
+    techStack: ['../images/techStack/Html.svg','../images/techStack/CSS.svg','../images/techStack/Javascript.svg','../images/techStack/Gsap.svg','../images/techStack/TailwindCss.svg'], 
     Description: 'Membuat Website dengan React dan TailwindCss dan animasi dengan GSAp'
   },
   { 
     name: 'Back End', 
-    imageUrl: './src/assets/techStack/Sampul/CODE.png', 
-    techStack: ['./src/assets/techStack/PHP.svg','./src/assets/techStack/Firebase.svg','./src/assets/techStack/Laravel.svg','./src/assets/techStack/Python.svg',], 
+    imageUrl: '../images/techStack/Sampul/CODE.png', 
+    techStack: ['../images/techStack/PHP.svg','../images/techStack/Firebase.svg','../images/techStack/Laravel.svg','../images/techStack/Python.svg',], 
     Description: 'Membuat Website dengan Framework Laravel dan dengan Flask Python'
   },
 ]
 
 const bestProject = [{
   name: "HYDROSEE APP",
-  mainImageUrl: "../src/assets/bestProject/smpl.png",
-  image1Url: "../src/assets/bestProject/1.png",
-  image2Url: "../src/assets/bestProject/2.png",
-  techStackApp: ["../src/assets/techStack/Figma.svg", "../src/assets/techStack/Tinkercad.svg", "../src/assets/techStack/Python.svg", "../src/assets/techStack/Firebase.svg", "../src/assets/techStack/Dart.svg", "../src/assets/techStack/Flutter.svg"],
+  mainImageUrl: pathImage+"/bestProject/smpl.png",
+  image1Url: pathImage+"/bestProject/1.png",
+  image2Url: pathImage+"/bestProject/2.png",
+  techStackApp: [pathImage+"/techStack/Figma.svg", pathImage+"/techStack/Tinkercad.svg", pathImage+"/techStack/Python.svg", pathImage+"/techStack/Firebase.svg", pathImage+"/techStack/Dart.svg", pathImage+"/techStack/Flutter.svg"],
   description: "Pada Project Semester 5, Saya dan tim  membuat sebuah aplikasi mobile yang terintegrasi dengan sistem IoT. Di project kali ini kami menyelesaikan masalah terkait pertanian hidroponik yang selalu menjadi tempat main serangga belalang karena letakny yang di pinggir sawah. Dengan mengintegrasikan Sistem Cerdas berbasis machine learning yang dikolaborasikan dengan Sistem Pengolahan Citra dan Vision dalam mendeteksi belalang, Hasil dari deteksi ini digunakan untuk mentrigger Sistem IoT untuk bertindak.",
 }]
 
 const galery1 = [
   {
-    url: "../src/assets/galery/feedEpim.webp",
+    url: pathImage+"/galery/feedEpim.webp",
     name: "Feed Epim"
   },
   {
-    url: "../src/assets/galery/feedWorkshop.webp",
+    url: pathImage+"/galery/feedWorkshop.webp",
     name: "Feed Workshop Kelas Kreatif"
   },
   {
-    url: "../src/assets/galery/posterHarlahPancasila.webp",
+    url: pathImage+"/galery/posterHarlahPancasila.webp",
     name: "Poster Harlah Pancasila"
   },
 ]
 
 const galery2 = [
   {
-    url: "../src/assets/galery/oprec.webp",
+    url: pathImage+"/galery/oprec.webp",
     name: "Flyer Oprec Imun"
   },
   {
-    url: "../src/assets/galery/flyerGerakJalan.webp",
+    url: pathImage+"/galery/flyerGerakJalan.webp",
     name: "Flyer Gerak Jalan Kabupaten Nganjuk"
   },
   {
-    url: "../src/assets/galery/posterWaisak.webp",
+    url: pathImage+"/galery/posterWaisak.webp",
     name: "Poster Waisak"
   },
 ]
 
 const galery3 = [
   {
-    url: "../src/assets/galery/demisioner.webp",
+    url: pathImage+"/galery/demisioner.webp",
     name: "Feed Demisioner"
   },
   {
-    url: "../src/assets/galery/FeedSubSektorApp.webp",
+    url: pathImage+"/galery/feedSubSektorApp.webp",
     name: "Feed SubSektor Aplikasi"
   },
   {
-    url: "../src/assets/galery/posterUAS.webp",
+    url: pathImage+"/galery/posterUAS.webp",
     name: "Poster UAS"
   },
 ]
 
 const galery4 = [
   {
-    url: "../src/assets/galery/posterMaulid.webp",
+    url: pathImage+"/galery/posterMaulid.webp",
     name: "Poster Maulid"
   },
   {
-    url: "../src/assets/galery/bannerWorkshop.webp",
+    url: pathImage+"/galery/bannerWorkshop.webp",
     name: "Banner Workshop"
   },
   {
-    url: "../src/assets/galery/posterImlek.webp",
+    url: pathImage+"/galery/posterImlek.webp",
     name: "Poster Imlek"
   },
 ]
@@ -109,7 +111,7 @@ export default function Home() {
               <h2 className='text-white text-4xl font-normal'>PRADITYA IVAN RAHMADHANI</h2>
             </div>
             <div className="col-span-2 row-span-3 col-start-3 row-start-2">
-              <img src="./src/assets/no_bg_gradient.webp" alt="its me bro" className="h-full w-auto" />
+              <img src= {pathImage + "/no_bg_gradient.webp"} alt="its me bro" className="h-full w-auto" />
               <img src="" alt=""/>
             </div>
             <div className="col-span-2 col-start-5 row-start-3 content-end">
@@ -270,12 +272,12 @@ export default function Home() {
               <h2>BEST DESIGN</h2>
               <h3 className="text-end">2025</h3>
             </div>
-            <img className="absolute bottom-0 left-0 z-10 aspect-video object-cover w-full" src="../src/assets/galery/sampul/bgBestDesign2025.webp" alt="" />
+            <img className="absolute bottom-0 left-0 z-10 aspect-video object-cover w-full" src={pathImage+"/galery/sampul/bgBestDesign2025.webp"} alt="" />
           </div>
 
           <div className="flex flex-col gap-5">
             <div className="">
-              <img className="w-full h-fit" src="../src/assets/galery/carousaleReor.webp" alt="" />
+              <img className="w-full h-fit" src={pathImage+"/galery/carousaleReor.webp"} alt="" />
             </div>
             <div className="flex flex-row w-full h-fit gap-5">
               <div className="flex flex-col w-full h-fit gap-5">
