@@ -182,7 +182,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='absolute w-screen top-0 left-0 min-h-screen -z-10'>
+        <div className='absolute w-full top-0 left-0 min-h-screen -z-10'>
           <Ballpit
             count={100}
             gravity={0.01}
@@ -253,7 +253,7 @@ export default function Home() {
                     //   </div> */}
                     //   <img data-tooltip-target="tooltip-jese" key={i} className="w-10 h-10 shadow-md shadow-black/80 transition-transform duration-300" src={icon} alt={bp-icon-{i}}/>
                     // </Tooltip>
-                    <img key={i} class="w-10 h-10 shadow-md shadow-black/80 transition-transform duration-300" src={icon} alt={bp-icon-{i}} />
+                    <img key={i} className="w-10 h-10 shadow-md shadow-black/80 transition-transform duration-300" src={icon} alt={bp-icon-{i}} />
                   ))}
                 </div>
 
@@ -316,7 +316,7 @@ export default function Home() {
       <footer>
         <div className="flex flex-row justify-between py-4 px-10">
           <a className="text-lg font-medium text-gray-500" href="#">← previous</a>
-          <a className="text-lg font-medium text-brand-0" href="#">
+          <a className="text-lg font-medium text-brand-0" href="/contact">
             <p>Next →</p>
             {/* <div>
               <p>TENTANG</p>
