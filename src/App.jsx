@@ -3,14 +3,14 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
-import Home from './components/home.component'
-import Contact from './components/contact.component'
+import Home from './pages/home'
+import Contact from './pages/contact'
 
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, LanguageIcon, LightBulbIcon, MoonIcon, SunIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Home', href: '/', current: false },
+  { name: 'Home', href: '/', current: true },
   { name: 'About', href: '/about', current: false },
   { name: 'Experience', href: '#', current: false },
   { name: 'My Project', href: '#', current: false },
@@ -113,7 +113,7 @@ const App = () => {
               </DisclosureButton>
             ))}
 
-            <a className='bg-brand-1000 text-brand-0 py-2 px-6 rounded-full'>Let's Connected</a>
+            <a className='bg-brand-1000 text-brand-0 py-2 px-6 rounded-full' href='/contact'>Let's Connected</a>
           </div>
         </DisclosurePanel>
       </Disclosure>

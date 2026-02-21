@@ -1,0 +1,32 @@
+src/
+├── assets/              # Foto, Icon (svg/png), Font
+├── components/          # Komponen UI yang bisa dipakai di mana saja
+│   ├── ui/              # Komponen paling kecil (Atoms)
+│   │   ├── Button.js
+│   │   ├── Input.js
+│   │   └── Badge.js
+│   └── common/          # Komponen struktur global (Molecules)
+│       ├── Navbar.js
+│       ├── Footer.js
+│       └── Sidebar.js
+├── layouts/             # Template pembungkus halaman
+│   ├── MainLayout.js    # Layout dengan Navbar & Footer
+│   └── AuthLayout.js    # Layout khusus Login/Register (tanpa Navbar)
+├── pages/               # Halaman utama (setara dengan View di Laravel)
+│   ├── Home.js
+│   ├── About.js
+│   ├── ProductDetail.js
+│   └── Login.js
+├── hooks/               # Fungsi logika khusus (Custom Hooks)
+│   └── useCart.js       # Logika keranjang belanja
+├── services/            # Konfigurasi API (Axios/Fetch)
+│   └── api.js
+└── App.js               # Root file (Tempat setting Router)
+
+components/ui: Isinya komponen "bodoh" yang cuma terima props. Mirip seperti folder resources/views/components di Laravel.
+
+layouts: Di Laravel, ini seperti layouts/app.blade.php. Kamu bikin satu file yang isinya Navbar dan Footer, lalu ada slot (di React namanya {children}) untuk isi kontennya.
+
+pages: Ini adalah tujuan akhir dari URL. Kalau user buka /about, maka file pages/About.js yang akan muncul.
+
+services: Tempat naruh semua fungsi fetch ke API Laravel kamu. Jadi kalau URL API berubah, kamu cuma ganti di satu file ini saja.
