@@ -10,6 +10,8 @@ import Navbar from './components/layouts/navbar.ly'
 import Home from './pages/home'
 import About from './pages/about'
 import Contact from './pages/contact'
+import Experience from './pages/experience'
+
 
 const App = () => {
   return (
@@ -21,6 +23,7 @@ const App = () => {
             <Route path='/' element={<Home/>}/>
             <Route path='/contact' element={<Contact/>} />
             <Route path='/about' element={<About/>} />
+            <Route path='/experience' element={<Experience/>} />
         </Routes>
       </Router>
 

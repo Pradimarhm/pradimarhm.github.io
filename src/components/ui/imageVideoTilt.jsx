@@ -52,6 +52,7 @@ const ImageVideoTilt = ({imageUrl}) => {
           src={imageUrl} 
           className="w-full h-full object-cover" 
           alt="Hydrosee App"
+          loading="lazy"
         />
       </div>
     </div>

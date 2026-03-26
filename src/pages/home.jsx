@@ -36,7 +36,7 @@ export default function Home() {
               <h2 className='text-white text-4xl font-normal'>PRADITYA IVAN RAHMADHANI</h2>
             </div>
             
-            <img src= {pathImage + "/me.png"} alt="its me bro" className="h-full w-auto" />
+            <img src= {pathImage + "/me.png"} alt="its me bro" loading="lazy" className="h-full w-auto" />
           </div>
             {/* <div className="col-span-2 row-span-3 row-start-2">
               

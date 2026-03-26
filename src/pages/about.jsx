@@ -14,8 +14,8 @@ export default function About() {
     return (
         <div>
             {/* mainsection about */}
-            <section className="flex justify-center pt-40 min-h-screen">
-                <div className="flex flex-row w-7xl gap-8 px-2 sm:px-4 md:px-6 lg:px-10">
+            <section className="relative flex justify-center pt-40 min-h-screen">
+                <div className="z-10 flex flex-row w-7xl gap-8 px-2 sm:px-4 md:px-6 lg:px-10">
 
                     <div className="flex flex-col w-full h-full gap-4">
                         {/* Gambar Utama (Atas) */}
@@ -36,13 +36,14 @@ export default function About() {
                     </div>
 
                     <div className="flex flex-col w-full gap-8">
-                        <h1 className="flex flex-col text-7xl font-extrabold leading-none text-brand-0">
-                            <span>Tentang</span>
-                            <span>Saya</span>
+                        <h1 className="flex flex-col text-7xl font-bold leading-none text-brand-0">
+                            <span>TENTANG</span>
+                            <span>SAYA</span>
                         </h1>
                         <p className=' text-brand-50 text-justify '>Saya adalah mahasiswa semester 6 jurusan Teknik Informatika di Politeknik Negeri Jember. Saya memiliki pengalaman Fullstack Developer & Designer yang berfokus pada pengalaman pengguna. Memiliki pengalaman dalam membangun aplikasi web modern menggunakan React dan Laravel, serta dalam otomasi sistem melalui IoT dan manajemen database yang efisien., dengan menguasai HTML, CSS, JavaScript, PHP, Python, dan Java.</p>
                     </div>
                 </div>
+                <img className="absolute z-0 aspect-video bottom-0 left-0 brightness-25" src="https://images.unsplash.com/photo-1648071343677-fac075603d3c?q=80&w=1615&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
             </section>
 
             {/* Tech Section */}
@@ -84,7 +85,7 @@ export default function About() {
                             TechStack.filter((item) => item.category === activeTech).map((item)=> (
                                 <div className='w-36 h-auto'>
                                     <div className='w-36 h-auto'>
-                                        <img className='w-full h-full aspect-square object-cover' src={item.imageUrl} alt="" />
+                                        <img className='w-full h-full aspect-square object-cover' src={item.imageUrl} alt="" loading="lazy" />
                                     </div>
                                     <p className='text-brand-1000'>{item.name}</p>
                                 </div>
@@ -95,7 +96,7 @@ export default function About() {
             </section>
 
             {/* Organisation Section */}
-            <section className='flex justify-center pt-8 bg-brand-1000 min-h-screen'>
+            {/* <section className='flex justify-center pt-8 bg-brand-1000 min-h-screen'>
                 <div className='w-7xl'>
                     <h2 className="text-7xl font-medium text-brand-0 mb-4">PENGALAMAN ORGANISASI</h2>
                     <div className='flex flex-row gap-4 py-4'>
@@ -109,7 +110,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     )
 }
