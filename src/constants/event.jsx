@@ -21,7 +21,7 @@ export const Event = [
         periode: '04 Juli-08 September 2025',
         jobdesk: ['Creative Multimedia'], 
         Description: 'Bertugas dalam mengembangkan identitas visual event, dan memastikan setiap moment terdokumentasi dengan baik, serta memastikan acara berjalan dengan lancar dengan menjadi operator event yang menata penyajian visual sesuai dengan timeline atau rundown yang ada',
-        sertificationUrl: '',
+        sertificationUrl: 'none',
         mainDesignUrl: [pathDesign+'',pathDesign+'',pathDesign+'']
     },
     { 
@@ -32,7 +32,7 @@ export const Event = [
         periode: '04-08 September 2025',
         jobdesk: ['Creative Multimedia'], 
         Description: 'Bertugas dalam mengembangkan identitas visual event, dan memastikan setiap moment terdokumentasi dengan baik, serta memastikan acara berjalan dengan lancar dengan menjadi operator event yang menata penyajian visual secara livestream sesuai dengan timeline atau rundown yang ada',
-        sertificationUrl: '',
+        sertificationUrl: 'https://drive.google.com/file/d/1Nn735Iag2UuzBMcOa7gVqTRZ8h7m6TUt/view?usp=sharing',
         mainDesignUrl: [pathDesign+'',pathDesign+'',pathDesign+'']
     },
     { 
@@ -43,7 +43,7 @@ export const Event = [
         periode: '04 Juli-08 September 2025',
         jobdesk: ['Creative Multimedia'], 
         Description: 'Bertugas dalam mengembangkan identitas visual event, dan memastikan setiap moment terdokumentasi dengan baik, serta memastikan acara berjalan dengan lancar dengan menjadi operator event yang menata penyajian visual sesuai dengan timeline atau rundown yang ada',
-        sertificationUrl: '',
+        sertificationUrl: 'https://drive.google.com/file/d/1K3q0W9qq-2SO-M85Cvl1veuuxg6Ee50i/view?usp=sharing',
         mainDesignUrl: [pathDesign+'',pathDesign+'',pathDesign+'']
     },
     { 
@@ -54,7 +54,7 @@ export const Event = [
         periode: '13 September 2025',
         jobdesk: ['Creative Multimedia'], 
         Description: 'Bertugas dalam mengembangkan identitas visual event, dan memastikan setiap moment terdokumentasi dengan baik, serta memastikan acara berjalan dengan lancar dengan menjadi operator event yang menata penyajian visual sesuai dengan timeline atau rundown yang ada',
-        sertificationUrl: '',
+        sertificationUrl: 'https://drive.google.com/file/d/1FsIsBXv6clNEg4uzTiCl2iXsDdj-jYUd/view?usp=sharing',
         mainDesignUrl: [pathDesign+'',pathDesign+'',pathDesign+'']
     },
 ]

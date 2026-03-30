@@ -9,7 +9,7 @@ import Navbar from './components/layouts/navbar.ly'
 // Pages
 import Home from './pages/home'
 import About from './pages/about'
-import Contact from './pages/contact'
+import ContactMe from './pages/contact'
 import Experience from './pages/experience'
 
 
@@ -21,7 +21,7 @@ const App = () => {
         
         <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/contact' element={<Contact/>} />
+            <Route path='/contact' element={<ContactMe/>} />
             <Route path='/about' element={<About/>} />
             <Route path='/experience' element={<Experience/>} />
         </Routes>

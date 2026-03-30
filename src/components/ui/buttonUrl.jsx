@@ -9,7 +9,7 @@ const CustomButtonUrl = ({label, url, onClick, type = "button", variant = "prima
             target="_blank"
             rel="noreferrer"
             type={type}
-            className={`btn ${buttonStyle} w-full flex justify-center py-2 cursor-pointer`}
+            className={`btn ${buttonStyle} w-full h-fit flex justify-center p-2 cursor-pointer`}
             onClick={onClick}
         >
             {label}

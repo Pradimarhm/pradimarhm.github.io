@@ -38,9 +38,9 @@ const Navbar = () => {
   return (
     <Disclosure
       as="nav"
-      className="fixed w-full px-2 sm:px-4 md:px-6 lg:px-10 pr-2 sm:pr-4 md:pr-6 lg:pr-10 pt-5 z-20 bg-transparent after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
+      className="fixed w-full flex justify-center px-2 sm:px-4 md:px-6 lg:px-10 pr-2 sm:pr-4 md:pr-6 lg:pr-10 pt-5 z-20 bg-transparent after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
     >
-      <div className="mx-none w-full">
+      <div className="mx-none w-7xl">
         <div className="relative bg-brand-0 rounded-full px-2 sm:px-4 lg:px-5 py-8 flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
             {/* Mobile menu button*/}
@@ -91,21 +91,6 @@ const Navbar = () => {
                   </Link>
                 );
               })}
-              {/* {navigation.map((item) => 
-                            (
-                                <a
-                                key={item.name}
-                                href={item.href}
-                                aria-current={item.current ? 'page' : undefined}
-                                className={classNames(
-                                    item.current ? 'bg-brand-500/50 text-white px-5' : 'text-brand-1000/50 hover:bg-brand-200/50 hover:px-5 hover:text-brand-300',
-                                    'rounded-full px-3 py-2 text-sm font-medium duration-300',
-                                )}
-                                >
-                                {item.name}
-                                </a>
-                            ))
-                        } */}
             </div>
           </div>
 
@@ -116,22 +101,6 @@ const Navbar = () => {
             >
               Let's Connected
             </a>
-            {/* <button
-              type="button"
-              className="relative rounded-full p-2 text-brand-1000 bg-gray-300 hover:bg-gray-500 hover:text-brand-50 active:bg-gray-800 duration-500 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
-            >
-              <span className="absolute -inset-1.5" />
-              <span className="sr-only">Theme</span>
-              <SunIcon aria-hidden="true" className="size-6" />
-            </button>
-            <button
-              type="button"
-              className="relative rounded-full p-2 text-brand-1000 bg-gray-300 hover:bg-gray-500 hover:text-brand-50 active:bg-gray-800 duration-500 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
-            >
-              <span className="absolute -inset-1.5" />
-              <span className="sr-only">Theme</span>
-              <LanguageIcon aria-hidden="true" className="size-6" />
-            </button> */}
           </div>
         </div>
       </div>

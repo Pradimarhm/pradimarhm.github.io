@@ -5,6 +5,10 @@ import DotGrid from '../components/common/dotGrid.components'
 // UI
 import SkillCard from '../components/common/skillcard.components'
 import BestProjectCard from "../components/common/bestProjectCard.components";
+import Marque from "../components/ui/marque";
+
+// layout
+import Footer from "../components/layouts/footer";
 
 // Constanta
 import { bestProject } from '../constants/bestProject.constanta'
@@ -19,7 +23,7 @@ const pathImage = "../images"
 
 export default function Home() {
   return (
-    <div className="bg-transparent">
+    <div className="bg-transparent w-full flex flex-col justify-center">
       <section className="flex flex-col pt-40 w-full justify-center items-center">
         <div className="flex flex-col w-7xl gap-8 px-2 sm:px-4 md:px-6 lg:px-10">
           <div className=" flex flex-row w-full justify-between gap-4">
@@ -55,64 +59,9 @@ export default function Home() {
             </div> */}
         </div>
 
-        <div className="flex flex-col w-full pt-8 overflow-hidden">
-          <div className='flex gap-0 w-full justify-end bg-brand-1000  text-brand-100 border-brand-100 text-lg whitespace-nowrap mb-4'>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Graphic Designer</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>UI/UX</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5 px-4'>IOT Dev</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Web Developer</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Graphic Designer</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5 px-4'>Video Editor</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Graphic Designer</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>UI/UX</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5 px-4'>IOT Dev</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Web Developer</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Graphic Designer</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5 px-4'>Video Editor</span>
-          </div>
-
-          <div className='flex gap-0 w-full justify-start bg-brand-1000 text-brand-100 border-brand-100 text-lg whitespace-nowrap mb-4'>
-            <span className='bg-brand-1000 border-y-2 py-2.5 px-4'>Video Editor</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>UI/UX</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5 px-4'>IOT Dev</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Graphic Designer</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Web Developer</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5 px-4'>Video Editor</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>UI/UX</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5 px-4'>IOT Dev</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Graphic Designer</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Web Developer</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5 px-4'>Video Editor</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>UI/UX</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5 px-4'>IOT Dev</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Graphic Designer</span>
-            <span className='bg-brand-1000 border-y-2 py-2.5'>•</span>
-            <span className='bg-brand-1000 border-y-2 font-semibold py-2.5 px-4'>Web Developer</span>
-          </div>
+        <div className="flex flex-col w-full pt-8">
+          <Marque direction="left"/>
+          <Marque direction="right"/>
         </div>
 
         <div className='absolute inset-0 -z-10'>
@@ -127,16 +76,6 @@ export default function Home() {
             resistance={250}
             returnDuration={1.5}
           />
-          {/* <Ballpit
-            count={100}
-            gravity={0.01}
-            friction={0.9975}
-            wallBounce={0.95}
-            followCursor={false}
-            colors={[0x000C1B, 0x002D64, 0x004495]}
-            ambientColor={0x000102}
-            className="bg-brand-1000"
-          /> */}
         </div>
       </section>
 
@@ -160,6 +99,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* best project */}
       <section className="flex min-h-screen justify-center items-center px-2 sm:px-4 md:px-6 lg:px-10 bg-brand-1000">
         <div className="w-7xl">
           <h2 className="text-7xl font-medium text-brand-0 mb-4">BEST PROJECT</h2>
@@ -179,14 +119,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-brand-950 px-2 sm:px-4 md:px-6 lg:px-10 py-10">
-        <div className="">
+      {/* best design */}
+      <section className="bg-brand-950 flex justify-center px-2 sm:px-4 md:px-6 lg:px-10 py-10">
+        <div className="w-7xl">
           <div className="relative mb-5">
             <div className="relative z-20 aspect-video p-4 w-full text-brand-0 text-7xl font-bold flex flex-col justify-between">
               <h2>BEST DESIGN</h2>
               <h3 className="text-end">2025</h3>
             </div>
-            <img className="absolute bottom-0 left-0 z-10 aspect-video object-cover w-full" src={pathImage+"/galery/sampul/bgBestDesign2025.webp"} alt="" />
+            <img className="absolute bottom-0 left-0 z-10 aspect-video object-cover w-full" src={pathImage+"/galery/sampul/sampul_best_design.webp"} alt="" />
           </div>
 
           <div className="flex flex-col gap-5">
@@ -227,17 +168,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <div className="flex flex-row justify-between py-4 px-10">
-          <a className="text-lg font-medium text-gray-500" href="#">← previous</a>
-          <a className="text-lg font-medium text-brand-0" href="/contact">
-            <p>Next →</p>
-            {/* <div>
-              <p>TENTANG</p>
-            </div> */}
-          </a>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 }
