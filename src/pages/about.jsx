@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // UI
 import CustomStrokeButton from "../components/ui/strokeButton"
 import ImageVideoTilt from '../components/ui/imageVideoTilt';
@@ -13,6 +13,10 @@ import { TechStack } from '../constants/techStack';
 export default function About() {
     const [activeTech, setActiveTech] = useState("Core Langguage");
     const handleActive = (name) => setActiveTech(name);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div>
@@ -88,7 +92,7 @@ export default function About() {
                             TechStack.filter((item) => item.category === activeTech).map((item)=> (
                                 <div className='w-36 h-auto'>
                                     <div className='w-36 h-auto'>
-                                        <img className='w-full h-full aspect-square object-cover' src={item.imageUrl} alt="" loading="lazy" />
+                                        <img className='w-full h-full aspect-square object-cover' src={item.imageUrl} alt="" />
                                     </div>
                                     <p className='text-brand-1000'>{item.name}</p>
                                 </div>

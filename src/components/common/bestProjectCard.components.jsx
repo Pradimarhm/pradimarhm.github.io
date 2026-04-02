@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 // UI
 import ImageTilt from '../ui/imageSquareTilt';
 import MainImageTilt from '../ui/mainImageTilt';
-import Button from '../ui/button';
+import CustomButtonUrl from '../ui/buttonUrl';
 
 const BestProjectCard = ({title, description, mainImageUrl, image1Url, image2Url, toolTech}) => {
     return (
-        <div className='flex flex-row w-full gap-2.5'>
+        <div className='flex flex-row w-full h-fit gap-2.5'>
             
             <div className='flex flex-row w-full gap-2.5'>
                     <MainImageTilt
@@ -35,12 +36,21 @@ const BestProjectCard = ({title, description, mainImageUrl, image1Url, image2Url
                         ))}
                     </div>
                 </div>
-                <Button
+                <Link
+                    className='w-full h-fit flex justify-center p-2 bg-brand-500 text-brand-0 hover:bg-brand-600 duration-300'
+                    to={'/myProject'}
+                >
+                    Lihat Project Lainnya
+                </Link>
+                
+                {/* <a className='w-full h-fit flex justify-center p-2 bg-brand-500 text-brand-0 hover:bg-brand-600 duration-300' href="/myProject">Lihat Project Lainnya</a> */}
+                {/* <CustomButtonUrl
                     label={'Lihat Project Lainnya'}
                     onClick={'#'}
                     type='button'
                     variant='primary'
-                />
+                    url={'/myProject'}
+                /> */}
             </div>
         </div>
     )

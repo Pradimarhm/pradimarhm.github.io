@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { gsap } from 'gsap';
 
-const MainImageTilt = ({imageUrl}) => {
+const MainImageTilt = ({imageUrl, style}) => {
   const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -46,13 +46,12 @@ const MainImageTilt = ({imageUrl}) => {
     >
       <div 
         ref={cardRef}
-        className="w-96 aspect-square overflow-hidden shadow-2xl cursor-pointer"
+        className={`${style} aspect-square overflow-hidden shadow-2xl cursor-pointer`}
       >
         <img 
           src={imageUrl} 
           className="w-full h-full object-cover" 
           alt="Hydrosee App"
-          loading="lazy"
         />
       </div>
     </div>

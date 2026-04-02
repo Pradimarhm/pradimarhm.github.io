@@ -1,4 +1,5 @@
 import Label from "../components/ui/Label"
+import React, { useEffect } from 'react'
 
 // ui
 import CustomButtonUrl from "../components/ui/buttonUrl"
@@ -11,6 +12,11 @@ import { organization } from "../constants/organization"
 import { Event } from "../constants/event"
 
 export default function Experience() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     return (
         <div className="bg-transparent w-full flex flex-col justify-center">
             {/* main section experience */}

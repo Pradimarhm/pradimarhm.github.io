@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Alert, Snackbar } from '@mui/material'; // Impor Alert dan Snackbar
 import CheckIcon from '@mui/icons-material/Check';
 
@@ -55,6 +55,10 @@ export default function Contact() {
         e.preventDefault();
         setFormData({ nama: '', email: '', pesan: '' });
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     
     return (
         // <div className='bg-brand-1000'>
@@ -79,7 +83,6 @@ export default function Contact() {
             </Snackbar>
             <div className='max-w-7xl mx-auto'>
                 <section className='flex flex-row gap-8 pt-32 px-2 sm:px-4 md:px-6 lg:px-10 pb-10'>
-                    {/* <h3 className='text-white pt-32'>About</h3> */}
                     <div className='w-full h-fit'>
                         <h3 className='lg:text-7xl leading-none font-bold pr-32 mb-2 bg-linear-to-r from-brand-700 to-brand-500 bg-clip-text text-transparent md:text-7xl sm:text-5xl text-3xl'>ANY ASK FOR ME?</h3>
                         
@@ -99,7 +102,7 @@ export default function Contact() {
                                     <img 
                                         className="w-full h-full object-cover rounded-lg" 
                                         src="./images/8s8sud9d88e5r7fw/IMG_0404.webp" 
-                                        alt="Foto 2" 
+                                        alt="Foto 2"
                                     />
                                 </div>
                             </div>

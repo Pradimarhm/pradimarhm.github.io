@@ -24,8 +24,8 @@ const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "About", href: "/about", current: false },
   { name: "Experience", href: "/experience", current: false },
-  { name: "My Project", href: "#", current: false },
-  { name: "My Design", href: "#", current: false },
+  { name: "My Project", href: "/myProject", current: false },
+  // { name: "My Design", href: "#", current: false },
 ];
 
 function classNames(...classes) {
@@ -42,7 +42,7 @@ const Navbar = () => {
     >
       <div className="mx-none w-7xl">
         <div className="relative bg-brand-0 rounded-full px-2 sm:px-4 lg:px-5 py-8 flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
+          <div className="absolute w-full inset-y-0 left-0 flex items-center lg:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-5 text-brand-1000 hover:bg-white/5 hover:text-gray-500 focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
               <span className="absolute -inset-0.5" />
@@ -95,12 +95,12 @@ const Navbar = () => {
           </div>
 
           <div className="absolute inset-y-0 right-0 flex items-center pr-5 gap-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="hidden bg-brand-1000 text-brand-0 py-2 px-6 rounded-full lg:flex hover:bg-gray-700 active:bg-gray-500 duration-500"
             >
               Let's Connected
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -124,12 +124,12 @@ const Navbar = () => {
             </DisclosureButton>
           ))}
 
-          <a
+          <Link
             className="bg-brand-1000 text-brand-0 py-2 px-6 rounded-full"
-            href="/contact"
+            to="/contact"
           >
             Let's Connected
-          </a>
+          </Link>
         </div>
       </DisclosurePanel>
     </Disclosure>

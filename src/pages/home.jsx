@@ -1,4 +1,5 @@
 import { Description } from "@headlessui/react";
+import React, { useEffect, useMemo } from 'react'
 
 import DotGrid from '../components/common/dotGrid.components'
 
@@ -12,7 +13,6 @@ import Footer from "../components/layouts/footer";
 
 // Constanta
 import { bestProject } from '../constants/bestProject.constanta'
-import {galery1, galery2, galery3, galery4} from '../constants/designrecap2025.constanta'
 import { skill } from '../constants/skill.constanta'
 // import { Tooltip } from 'flowbite-react';
 
@@ -22,6 +22,22 @@ import { skill } from '../constants/skill.constanta'
 const pathImage = "../images"
 
 export default function Home() {
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+  }, []);
+
+  const imagePath = import.meta.glob('../assets/images/bestDesign/**/*.{png,jpg,jpeg,svg,webp}', { eager: true });
+
+  const galery = useMemo(() => {
+    return Object.keys(imagePath).map((path) => {
+      // Vite eager import biasanya mengembalikan object dengan property 'default'
+      return imagePath[path].default;
+    });
+  }, [imagePath]);
+
+  console.log(galery);
+  
   return (
     <div className="bg-transparent w-full flex flex-col justify-center">
       <section className="flex flex-col pt-40 w-full justify-center items-center">
@@ -40,23 +56,13 @@ export default function Home() {
               <h2 className='text-white text-4xl font-normal'>PRADITYA IVAN RAHMADHANI</h2>
             </div>
             
-            <img src= {pathImage + "/me.png"} alt="its me bro" loading="lazy" className="h-full w-auto" />
+            <img src= {pathImage + "/me.png"} alt="its me bro" className="h-full w-auto" />
           </div>
-            {/* <div className="col-span-2 row-span-3 row-start-2">
-              
-            </div> */}
-            {/* <div className="col-span-2 row-span-3 col-start-3 row-start-2">
-              
-              <img src="" alt=""/>
-            </div> */}
 
-          <div className="flex flex-row gap-4 py-10">
+          <div className="flex flex-row gap-4 py-10 items-center">
             <h3 className='text-white text-2xl font-bold text-end'>I CAN DESIGN AND DEVELOP YOUR WEBSITE</h3>
-            <p className='text-sm font-normal text-gray-300'>Fullstack Developer & Designer yang berfokus pada pengalaman pengguna. Memiliki pengalaman dalam membangun aplikasi web modern menggunakan React dan Laravel, serta dalam otomasi sistem melalui IoT dan manajemen database yang efisien.</p>
+            <p className='text-sm font-normal text-gray-300'>Full-Stack Developer & Designer with a focus on user experience. Experienced in building modern web applications using TailwindCss and Laravel, as well as in system automation via IoT and efficient database management.</p>
           </div>
-            {/* <div className="col-span-2 col-start-5 row-start-4">
-              
-            </div> */}
         </div>
 
         <div className="flex flex-col w-full pt-8">
@@ -131,35 +137,22 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-5">
-            <div className="">
-              <img className="w-full h-fit" src={pathImage+"/galery/carousaleReor.webp"} alt="" />
-            </div>
+            {/* <div className="">
+              <img className="w-full h-fit" src={"../assets/images/bestDesign/carousaleReor.webp"} alt="" />
+            </div> */}
             <div className="flex flex-row w-full h-fit gap-5">
-              <div className="flex flex-col w-full h-fit gap-5">
+              <div className="w-full h-fit columns-4 space-y-5 gap-5 justify-start pl-5">
                 {
-                  galery1.map((item1)=> (
-                    <img className="w-full h-fit" src={item1.url} alt={item1.name} />
-                  ))
-                }
-              </div>
-              <div className="flex flex-col w-full h-fit gap-5">
-                {
-                  galery2.map((item2)=> (
-                    <img className="w-full h-fit" src={item2.url} alt={item2.name} />
-                  ))
-                }
-              </div>
-              <div className="flex flex-col w-full h-fit gap-5">
-                {
-                  galery3.map((item3)=> (
-                    <img className="w-full h-fit" src={item3.url} alt={item3.name} />
-                  ))
-                }
-              </div>
-              <div className="flex flex-col w-full h-fit gap-5">
-                {
-                  galery4.map((item4)=> (
-                    <img className="w-full h-fit" src={item4.url} alt={item4.name} />
+                  galery.map((item, index)=> (
+                    <div key={index} className="group h-fit relative bg-transparent">
+                        <img 
+                            src={item} 
+                            alt={`preview ${index + 1}`}
+                            className="w-96 transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy" 
+                        />
+                    </div>
+                    // <img className="w-full h-fit" src={item1.url} alt='' />
                   ))
                 }
               </div>
