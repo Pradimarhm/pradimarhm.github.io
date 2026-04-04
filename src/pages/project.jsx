@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // ui
 import CustomStrokeButton2 from "../components/ui/strokeButton2"
 import CustomButton from '../components/ui/button';
+import Footer from "../components/layouts/footer";
 
 // constant
 import { ProjectCategory } from "../constants/projectCategory"
@@ -104,6 +105,8 @@ export default function Project() {
                     </div>
                 </section>
             </div>
+
+            <Footer/>
         </div>
     )
 }

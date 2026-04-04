@@ -15,6 +15,7 @@ import ContactMe from './pages/contact'
 import Experience from './pages/experience'
 import Project from './pages/project'
 import ProjectDetail from './pages/projectDetail'
+import Design from './pages/design';
 
 // --- KOMPONEN LOADING SCREEN ---
 const LoadingScreen = () => {
@@ -72,6 +73,8 @@ const App = () => {
                 <Route path='/experience' element={<Experience/>} />
                 <Route path='/myProject' element={<Project/>} />
                 <Route path='/project/:slug' element={<ProjectDetail/>} />
+
+                <Route path='/myDesign' element={<Design/>} />
             </Routes>
           </Router>
         </div>

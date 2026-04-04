@@ -1,0 +1,22 @@
+
+export const DesignCategory = [
+    {name: 'Semua',},
+    {name: 'Java Tech 1'},
+    {name: 'Java Tech 2'},
+    {name: 'Bootcamp UI UX'},
+    {name: 'Study Club'},
+    {name: 'Ramadhan Berkah'},
+    {name: 'Sekolah Bisnis Digital'},
+    {name: 'Demisioner'},
+    {name: 'Workshop Kelas Kreatif'},
+    {name: 'Makrab'},
+    {name: 'Oprec'},
+    {name: 'Poster'},
+    {name: 'Carousale'},
+    {name: 'Sg Instagram'},
+    {name: 'Feed Instagram'},
+    {name: 'Banner'},
+    {name: 'Thumbnail YT'},
+    {name: 'Frame'},
+    {name: 'Other'},
+]
