@@ -1,0 +1,52 @@
+
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "experience": "Experience",
+    "design": "My Design",
+    "project": "My Project",
+    "contact": "Let's Connected"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "subtitle": "Full-Stack Developer & Designer with a focus on user experience. Experienced in building modern web applications using TailwindCss and Laravel, as well as in system automation via IoT and efficient database management.",
+    "cta": "I CAN DESIGN AND DEVELOP WEBSITE"
+  },
+  "skill": {
+    "title": "MY SKILL",
+    "subtitle": "TECH STACK"
+  },
+  "bestProject": {
+    "title": "BEST PROJECT",
+    "button": "View Details"
+  },
+  "bestDesign": {
+    "title": "BEST DESIGN"
+  },
+
+  
+  "about": {
+    "title": "ABOUT ME",
+    "description": "I am a 6th semester student majoring in Informatics Engineering at Jember State Polytechnic. I have Fullstack Developer & Designer experience focused on user experience. Has experience in building modern web applications using React and Laravel, as well as in system automation through IoT and efficient database management, with mastery of HTML, CSS, JavaScript, PHP, Python, and Java."
+  },
+
+  
+  "experience": {
+    "title": "EXPERIENCE",
+    "subtitle": "ORGANIZATION, COMMITEE & EVENT",
+    "organization": "ORGANIZATION",
+    "event": "COMMITEE & EVENT",
+    "period": "Event Period",
+    "position": "Position",
+    "button": "Certification"
+  },
+
+  
+  "projectDetail": {
+    "duration": "Duration",
+    "position": "Position On Team",
+    "description": "Description",
+    "galery": "UI Galery"
+  }
+}

@@ -6,37 +6,63 @@ export const ProjectExample = [
         imageUrl: pathImage+'/project/hydrosee/3.png',
         secImageUrl: pathImage+'/project/hydrosee/4.png',
         tridImageUrl: pathImage+'/project/hydrosee/5.png',
-        description: 'For our 5th-semester project, my team and I developed a mobile app integrated with an IoT system. In this project, we addressed an issue related to hydroponic farming, which is often overrun by grasshoppers due to its location on the edge of rice fields. By integrating a machine learning-based smart system combined with image processing and computer vision to detect locusts, the results of this detection are used to trigger the IoT system to take action.',
-        duration: '3 Mount  (September-Desember 2025)',
+        description: {
+            id: 'Untuk proyek semester 5 kami, saya dan tim mengembangkan aplikasi seluler yang terintegrasi dengan sistem IoT. Pada proyek kali ini kami mengangkat permasalahan terkait pertanian hidroponik yang sering diserbu belalang karena lokasinya yang berada di pinggir persawahan. Dengan mengintegrasikan sistem pintar berbasis pembelajaran mesin yang dipadukan dengan pemrosesan gambar dan visi komputer untuk mendeteksi belalang, hasil deteksi tersebut digunakan untuk memicu sistem IoT mengambil tindakan.',
+            en: 'For our 5th-semester project, my team and I developed a mobile app integrated with an IoT system. In this project, we addressed an issue related to hydroponic farming, which is often overrun by grasshoppers due to its location on the edge of rice fields. By integrating a machine learning-based smart system combined with image processing and computer vision to detect locusts, the results of this detection are used to trigger the IoT system to take action.'
+        },
+        duration: '3 Mount  (September-December 2025)',
         techStack: [
             {
                 name: 'Figma',
-                describe: 'Tools design for UI Mobile App',
+                describe:{
+                    id: 'Desain alat untuk Tampilan Aplikasi Seluler',
+                    en: 'Tools design for UI Mobile App'
+                },
                 icon: pathImage+"/techStack/Figma.svg",
             },
             {
                 name: 'Tinkercad',
-                describe: 'Tools design for 3D Mockup IoT',
+                // describe: 'Tools design for 3D Mockup IoT',
+                describe:{
+                    id: 'Desain alat untuk 3D Mockup IoT',
+                    en: 'Tools design for 3D Mockup IoT'
+                },
                 icon: pathImage+"/techStack/Tinkercad.svg",
             }, 
             {
                 name: 'Python',
-                describe: 'Base langguage programing for backend system and machine learning',
+                // describe: 'Base langguage programing for backend system and machine learning',
+                describe:{
+                    id: 'Pemrograman bahasa dasar untuk sistem backend dan pembelajaran mesin',
+                    en: 'Base langguage programing for backend system and machine learning'
+                },
                 icon: pathImage+"/techStack/Python.svg",
             },  
             {
                 name: 'Firebase',
-                describe: 'base authentication using google sso',
+                // describe: 'base authentication using google sso',
+                describe:{
+                    id: 'Autentikasi dasar menggunakan google sso',
+                    en: 'Base authentication using google sso'
+                },
                 icon: pathImage+"/techStack/Firebase.svg",
             }, 
             {
                 name: 'Dart',
-                describe: 'base langguage programing for mobile app',
+                // describe: 'base langguage programing for mobile app',
+                describe:{
+                    id: 'Pemrograman bahasa dasar untuk aplikasi seluler',
+                    en: 'Base langguage programing for mobile app'
+                },
                 icon: pathImage+"/techStack/Dart.svg",
             }, 
             {
                 name: 'Flutter',
-                describe: 'framework for building or develop a mobile app',
+                // describe: 'framework for building or develop a mobile app',
+                describe:{
+                    id: 'Kerangka kerja untuk membangun atau mengembangkan aplikasi seluler',
+                    en: 'Framework for building or develop a mobile app'
+                },
                 icon: pathImage+"/techStack/Flutter.svg",
             }, 
         ],
@@ -49,12 +75,19 @@ export const ProjectExample = [
         imageUrl: pathImage+'/project/tracker_study_alumni/tracker_study_lp_ui_1.webp',
         secImageUrl: pathImage+'/project/tracker_study_alumni/mockup_dashboard_admin.webp',
         tridImageUrl: pathImage+'/project/tracker_study_alumni/mockup_dashboard_alumni.webp',
-        description: 'For our 6th-semester project, my team and I developed a website designed to locate alumni and provide job listings. the website’s primary feature is the Study Tracker questionnaire. This website will be used by TIF PSDKU Nganjuk Regency to collect Study Tracker questionnaires from alumni of this institution, with one of the questionnaire’s functions being to support program accreditation. In this project, I served as the UI/UX designer for the website, using Figma. I analyzed the requirements and interview data obtained from the program head and translated them into an Information Architecture (IA) and User Flow, which I created directly in Figma. After finalizing the IA and User Flow, I created a low-fidelity wireframe on paper, followed by mid- and high-fidelity versions in Figma.',
-        duration: '3 Mount  (Februari-Juni 2026)',
+        description: {
+            id: 'Untuk proyek semester 6 kami, saya dan tim mengembangkan situs web yang dirancang untuk mencari alumni dan menyediakan daftar pekerjaan. fitur utama situs web ini adalah kuesioner Study Tracker. Website ini akan digunakan oleh TIF PSDKU Kabupaten Nganjuk untuk mengumpulkan kuesioner Study Tracker dari alumni lembaga ini, yang salah satu fungsi kuesioner tersebut adalah untuk mendukung akreditasi program. Dalam proyek ini, saya berperan sebagai desainer UI/UX untuk website, menggunakan Figma. Saya menganalisis persyaratan dan data wawancara yang diperoleh dari kepala program dan menerjemahkannya ke dalam Arsitektur Informasi (IA) dan Alur Pengguna, yang saya buat langsung di Figma. Setelah menyelesaikan IA dan Alur Pengguna, saya membuat gambar rangka dengan fidelitas rendah di atas kertas, diikuti oleh versi fidelitas menengah dan tinggi di Figma.',
+            en: 'For our 6th-semester project, my team and I developed a website designed to locate alumni and provide job listings. the website’s primary feature is the Study Tracker questionnaire. This website will be used by TIF PSDKU Nganjuk Regency to collect Study Tracker questionnaires from alumni of this institution, with one of the questionnaire’s functions being to support program accreditation. In this project, I served as the UI/UX designer for the website, using Figma. I analyzed the requirements and interview data obtained from the program head and translated them into an Information Architecture (IA) and User Flow, which I created directly in Figma. After finalizing the IA and User Flow, I created a low-fidelity wireframe on paper, followed by mid- and high-fidelity versions in Figma.'
+        },
+        duration: '3 Mount  (February-June 2026)',
         techStack: [
             {
                 name: 'Figma',
-                describe: 'Tools design for UI Mobile App',
+                // describe: 'Tools design for UI Mobile App',
+                describe:{
+                    id: 'Desain alat untuk tampilan Aplikasi Seluler',
+                    en: 'Tools design for UI Mobile App'
+                },
                 icon: pathImage+"/techStack/Figma.svg",
             },
         ],
@@ -67,37 +100,64 @@ export const ProjectExample = [
         imageUrl: pathImage+'/project/kreasikan/kreasikan_infografis_ui.webp',
         secImageUrl: pathImage+'/project/kreasikan/kreasikan_home.webp',
         tridImageUrl: pathImage+'/project/kreasikan/kreasikan_sektor.webp',
-        description: 'For our 4th-semester project, my team and I developed a website serving as a platform for the creative economy in Nganjuk Regency—more specifically, a creative economy e-directory listing the creative economy businesses in Nganjuk Regency. In this project, my friends and I served as UI/UX designers, and my role was to design the website’s landing page.',
-        duration: '7 Mount  (Februari-Juni 2025)',
+        description: {
+            id: 'Untuk proyek semester 4, saya dan tim mengembangkan situs web yang berfungsi sebagai platform ekonomi kreatif di Kabupaten Nganjuk—lebih khusus lagi, e-direktori ekonomi kreatif yang berisi daftar usaha ekonomi kreatif di Kabupaten Nganjuk. Dalam proyek ini, saya dan teman-teman berperan sebagai desainer UI/UX, dan peran saya adalah mendesain halaman arahan situs web.',
+            en: 'For our 4th-semester project, my team and I developed a website serving as a platform for the creative economy in Nganjuk Regency—more specifically, a creative economy e-directory listing the creative economy businesses in Nganjuk Regency. In this project, my friends and I served as UI/UX designers, and my role was to design the website’s landing page.'
+        },
+        duration: '7 Mount  (February-June 2025)',
         techStack: [
             {
                 name: 'TailwindCss',
-                describe: 'Library for style in website',
+                // describe: 'Library for style in website',
+                describe:{
+                    id: 'Perpustakaan untuk gaya di situs web',
+                    en: 'Library for style in website'
+                },
                 icon: pathImage+"/techStack/TailwindCss.svg",
             },
             {
                 name: 'Laravel',
-                describe: 'Library for style in website',
+                // describe: 'Library for style in website',
+                describe:{
+                    id: 'Kerangka Kerja untuk pengembangan website',
+                    en: 'Framework for website development'
+                },
                 icon: pathImage+"/techStack/Laravel.svg",
             },
             {
                 name: 'PHP',
-                describe: 'Library for style in website',
+                // describe: 'Library for style in website',
+                describe:{
+                    id: 'Bahasa pemograman dasar untuk pengembangan website',
+                    en: 'Basic programming language for website development'
+                },
                 icon: pathImage+"/techStack/PHP.svg",
             },
             {
                 name: 'CSS',
-                describe: 'Library for style in website',
+                // describe: 'Library for style in website',
+                describe:{
+                    id: 'Bahasa pemograman dasar untuk pengembangan website',
+                    en: 'Basic programming language for website development'
+                },
                 icon: pathImage+"/techStack/CSS.svg",
             },
             {
                 name: 'JavaScript',
-                describe: 'Library for style in website',
+                // describe: 'Library for style in website',
+                describe:{
+                    id: 'Bahasa pemograman dasar untuk pengembangan website',
+                    en: 'Basic programming language for website development'
+                },
                 icon: pathImage+"/techStack/Javascript.svg",
             },
             {
                 name: 'Figma',
-                describe: 'Tools design for UI Mobile App',
+                // describe: 'Tools design for UI Mobile App',
+                describe:{
+                    id: 'Desain alat untuk tampilan website',
+                    en: 'Tools design for UI website'
+                },
                 icon: pathImage+"/techStack/Figma.svg",
             },
         ],

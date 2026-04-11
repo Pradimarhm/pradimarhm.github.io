@@ -2,8 +2,12 @@ import React, { useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ProjectExample } from '../constants/projectExample';
 import { Path } from 'three';
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectDetail() {
+    const { t, i18n } = useTranslation();
+    const lang = i18n.language;
+
     const { slug } = useParams();
     const imagePath = import.meta.glob('../assets/images/project/**/*.{png,jpg,jpeg,svg}', { eager: true });
 
@@ -37,7 +41,7 @@ export default function ProjectDetail() {
     // console.log(imagePath)
 
     if (!project) {
-        return <div className="text-white text-center py-20 pt-40">Project tidak ditemukan.</div>;
+        return <div className="text-white text-center py-20 pt-40">Project not found.</div>;
     }
 
     return (
@@ -47,13 +51,13 @@ export default function ProjectDetail() {
             </Link>  */}
             <section className="grid grid-cols-8 grid-rows-7 gap-4 aspect-video">
                 <div className="col-span-5 row-span-7 bg-brand-300 overflow-hidden">
-                    <img className='w-full' src={project.imageUrl} alt="" />
+                    <img className='w-full' src={project.imageUrl} alt="" loading="lazy" />
                 </div>
                 <div className="col-span-3 row-span-4 col-start-6 bg-brand-300 overflow-hidden flex items-center">
-                    <img className='w-full' src={project.secImageUrl} alt="" />
+                    <img className='w-full' src={project.secImageUrl} alt="" loading="lazy" />
                 </div>
                 <div className="col-span-3 row-span-3 col-start-6 bg-brand-300 overflow-hidden flex items-center">
-                    <img className='w-full' src={project.tridImageUrl} alt="" />
+                    <img className='w-full' src={project.tridImageUrl} alt="" loading="lazy"  />
                 </div>
             </section>
 
@@ -62,7 +66,7 @@ export default function ProjectDetail() {
                 <div className='w-full h-fit flex flex-col gap-10'>
                     <div className='w-full h-fit flex flex-row gap-5'>
                         <div className='w-full h-fit flex flex-col gap-5'>
-                            <h2 className='text-3xl font-normal text-brand-0'>Durasi</h2>
+                            <h2 className='text-3xl font-normal text-brand-0'>{t('projectDetail.duration')}</h2>
                             {
                                 project.duration.length > 0 ? (
                                     <div className='w-full h-fit flex justify-center p-2 bg-transparent border border-brand-0'>
@@ -75,7 +79,7 @@ export default function ProjectDetail() {
                         </div>
                         
                         <div className='w-full h-fit flex flex-col gap-5'>
-                            <h2 className='text-3xl font-normal text-brand-0'>Posisi di Tim</h2>
+                            <h2 className='text-3xl font-normal text-brand-0'>{t('projectDetail.position')}</h2>
                             <div className='w-full h-fit flex flex-wrap gap-2.5'>
                                 {
                                     project.position_on_team.length > 0 ? (
@@ -93,11 +97,11 @@ export default function ProjectDetail() {
                     </div>
 
                     <div className='w-full h-fit flex flex-col gap-5'>
-                        <h2 className='text-3xl font-normal text-brand-0'>Deskripsi Project</h2>
+                        <h2 className='text-3xl font-normal text-brand-0'>{t('projectDetail.description')}</h2>
                         <p className='text-lg font-normal text-brand-100'>
                             {
-                                project.description.length > 0 ? (
-                                    project.description
+                                project.description[lang].length > 0 ? (
+                                    project.description[lang]
                                 ) : 'no description yet'
                             }
                         </p>
@@ -110,10 +114,10 @@ export default function ProjectDetail() {
                                 project.techStack.length > 0 ? (
                                     project.techStack.map((item_stack)=> (
                                         <div className='w-xl h-fit flex flex-row gap-2 border'>
-                                            <img className='aspect-square w-16' src={item_stack.icon} alt="" />
+                                            <img className='aspect-square w-16' src={item_stack.icon} alt="" loading="lazy" />
                                             <div className='w-full h-fit flex flex-col justify-center'>
                                                 <h3 className='text-xl font-normal text-brand-100'>{item_stack.name}</h3>
-                                                <p className='text-lg font-normal text-brand-200'>{item_stack.describe}</p>
+                                                <p className='text-lg font-normal text-brand-200'>{item_stack.describe[lang]}</p>
                                             </div>
                                         </div>
                                     ))
@@ -130,7 +134,7 @@ export default function ProjectDetail() {
                     </div>
 
                     <div className='w-full h-fit flex flex-col gap-5'>
-                        <h2 className='text-3xl font-normal text-brand-0'>Galeri Tampilan</h2>
+                        <h2 className='text-3xl font-normal text-brand-0'>{t('projectDetail.galery')}</h2>
                         {galery.length > 0 ? (
                             <div className='w-full h-fit columns-4 space-y-5 gap-5'>
                                 {galery.map((src, index) => (

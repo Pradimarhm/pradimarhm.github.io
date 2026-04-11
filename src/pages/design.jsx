@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react'
+import { useTranslation } from 'react-i18next';
 
 // ui
 import Footer from "../components/layouts/footer";
@@ -19,6 +20,8 @@ const shuffleArray = (array) => {
 };
 
 export default function Design() {
+    const { t } = useTranslation();
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -46,7 +49,7 @@ export default function Design() {
             <div className="max-w-7xl min-h-screen mx-auto">
                 <section className='flex h-fit pt-20'>
                     <div className='flex flex-col items-center w-7xl h-fit gap-8 py-8 px-2 sm:px-4 md:px-6 lg:px-10'>
-                        <h1 className='text-7xl font-medium text-brand-0 mb-4'>MY DESIGN</h1>
+                        <h1 className='text-7xl font-medium text-brand-0 mb-4 uppercase'>{t('nav.design')}</h1>
                         <div className="w-full flex flex-wrap justify-center gap-2.5">
                             {
                                 DesignCategory.map((item) => (
@@ -74,7 +77,7 @@ export default function Design() {
                                                 src={src.imageUrl} 
                                                 // alt={`${project.name} preview ${index + 1}`}
                                                 className="w-96 transition-transform duration-500 group-hover:scale-105"
-                                                // loading="lazy" 
+                                                loading="lazy" 
                                             />
                                         </div>
                                     ))}

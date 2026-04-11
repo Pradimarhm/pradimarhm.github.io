@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 // ui
 import CustomStrokeButton2 from "../components/ui/strokeButton2"
@@ -11,6 +12,9 @@ import { ProjectCategory } from "../constants/projectCategory"
 import { ProjectExample } from '../constants/projectExample';
 
 export default function Project() {
+    const { t, i18n } = useTranslation();
+    const lang = i18n.language;
+
     const [activeTech, setActiveTech] = useState("Semua");
     const handleActive = (name) => setActiveTech(name);
 
@@ -34,7 +38,7 @@ export default function Project() {
                 {/* header section */}
                 <section className='flex h-fit pt-20'>
                     <div className='flex flex-col items-center w-7xl h-fit gap-8 py-8 px-2 sm:px-4 md:px-6 lg:px-10'>
-                        <h1 className='text-7xl font-medium text-brand-0 mb-4'>MY PROJECT</h1>
+                        <h1 className='text-7xl font-medium text-brand-0 mb-4 uppercase'>{t('nav.project')}</h1>
                         <div className="w-full flex flex-wrap justify-center gap-2.5">
                             {
                                 ProjectCategory.map((item) => (
@@ -60,7 +64,7 @@ export default function Project() {
                                     <div className='flex flex-col justify-between items-end gap-2.5'>
                                         <h2 className='text-white w-full text-2xl font-semibold flex flex-wrap'>{item.name}</h2>
                                         <div className="space-y-2 w-full text-left">
-                                            {item.description
+                                            {item.description[lang]
                                                 .split('\n')
                                                 .filter(line => line.trim() !== '')
                                                 .slice(0, 2)
@@ -79,6 +83,7 @@ export default function Project() {
                                                     className="w-10 h-10 shadow-md shadow-black/80 border border-gray-800" 
                                                     src={tech.icon} 
                                                     alt={tech.name} 
+                                                    loading="lazy" 
                                                 />
                                             ))}
                                         </div>
@@ -88,7 +93,7 @@ export default function Project() {
                                         >
                                             <CustomButton
                                                 style='w-full px-10'
-                                                label={'Lihat Detail'}
+                                                label={t('bestProject.button')}
                                             />
                                         </Link>
                                     </div>

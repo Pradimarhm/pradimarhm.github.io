@@ -1,5 +1,9 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+
+// ui
+import LangguageButton from "../ui/langguageButton";
 
 import {
   Disclosure,
@@ -20,13 +24,15 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-const navigation = [
-  { name: "Home", href: "/", current: true },
-  { name: "About", href: "/about", current: false },
-  { name: "Experience", href: "/experience", current: false },
-  { name: "My Project", href: "/myProject", current: false },
-  { name: "My Design", href: "/myDesign", current: false },
-];
+// const { t } = useTranslation();
+
+// const navigation = [
+//   { name: t('nav.home'), href: "/", },
+//   { name: t('nav.about'), href: "/about" },
+//   { name: t('nav.experience'), href: "/experience" },
+//   { name: t('nav.myProject'), href: "/myProject" },
+//   { name: t('nav.myDesign'), href: "/myDesign" },
+// ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -34,11 +40,20 @@ function classNames(...classes) {
 
 const Navbar = () => {
   const location = useLocation();
+  const { t } = useTranslation();
+
+  const navigation = [
+    { name: t('nav.home'), href: "/", },
+    { name: t('nav.about'), href: "/about" },
+    { name: t('nav.experience'), href: "/experience" },
+    { name: t('nav.project'), href: "/myProject" },
+    { name: t('nav.design'), href: "/myDesign" },
+  ];
 
   return (
     <Disclosure
       as="nav"
-      className="fixed w-full flex justify-center px-2 sm:px-4 md:px-6 lg:px-10 pr-2 sm:pr-4 md:pr-6 lg:pr-10 pt-5 z-20 bg-transparent after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
+      className="fixed w-full flex z-50 justify-center px-2 sm:px-4 md:px-6 lg:px-10 pr-2 sm:pr-4 md:pr-6 lg:pr-10 pt-5 bg-transparent after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
     >
       <div className="mx-none w-7xl">
         <div className="relative bg-brand-0 rounded-full px-2 sm:px-4 lg:px-5 py-8 flex h-16 items-center justify-between">
@@ -94,14 +109,26 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="absolute inset-y-0 right-0 flex items-center pr-5 gap-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div className="flex w-fit inset-y-0 right-0 items-center pr-5 gap-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            
+            <Link
+              to="/contact"              
+              className="flex text-nowrap w-fit bg-brand-1000 text-brand-0 py-2 px-6 rounded-full lg:flex hover:bg-gray-700 active:bg-gray-500 duration-500"
+            >
+              {t('nav.contact')}
+            </Link>
+            <LangguageButton type="Primary"/>
+          </div>
+
+          {/* <div className="absolute inset-y-0 right-0 flex items-center pr-5 gap-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <LangguageButton type="Primary"/>
             <Link
               to="/contact"
-              className="hidden bg-brand-1000 text-brand-0 py-2 px-6 rounded-full lg:flex hover:bg-gray-700 active:bg-gray-500 duration-500"
+              className="hidden w-full bg-brand-1000 text-brand-0 py-2 px-6 rounded-full lg:flex hover:bg-gray-700 active:bg-gray-500 duration-500"
             >
               Let's Connected
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -124,11 +151,13 @@ const Navbar = () => {
             </DisclosureButton>
           ))}
 
+          <LangguageButton type="Primary"/>
+
           <Link
             className="bg-brand-1000 text-brand-0 py-2 px-6 rounded-full"
             to="/contact"
           >
-            Let's Connected
+            {t('nav.contact')}
           </Link>
         </div>
       </DisclosurePanel>

@@ -1,0 +1,52 @@
+
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "experience": "Pengalaman",
+    "design": "Desain Saya",
+    "project": "Project Saya",
+    "contact": "Mari Terhubung"
+  },
+  "hero": {
+    "greeting": "Halo, saya",
+    "subtitle": "Pengembang & Desainer Full-Stack dengan fokus pada pengalaman pengguna. Berpengalaman dalam membangun aplikasi web modern menggunakan TailwindCss dan Laravel, serta dalam otomatisasi sistem melalui IoT dan manajemen database yang efisien.",
+    "cta": "SAYA DAPAT MERANCANG DAN MENGEMBANGKAN SITUS WEB"
+  },
+  "skill": {
+    "title": "SKILL SAYA",
+    "subtitle": "TEKNOLOGI DIGUNAKAN"
+  },
+  "bestProject": {
+    "title": "PROJECT TERBAIK",
+    "button": "Lihat Detail"
+  },
+  "bestDesign": {
+    "title": "DESIGN TERBAIK"
+  },
+
+  
+  "about": {
+    "title": "TENTANG SAYA",
+    "description": "Saya adalah mahasiswa semester 6 jurusan Teknik Informatika di Politeknik Negeri Jember. Saya memiliki pengalaman Fullstack Developer & Designer yang berfokus pada pengalaman pengguna. Memiliki pengalaman dalam membangun aplikasi web modern menggunakan React dan Laravel, serta dalam otomasi sistem melalui IoT dan manajemen database yang efisien., dengan menguasai HTML, CSS, JavaScript, PHP, Python, dan Java."
+  },
+
+  
+  "experience": {
+    "title": "PENGALAMAN",
+    "subtitle": "ORGANISASI, KEPANITIAAN & EVENT",
+    "organization": "ORGANISASI",
+    "event": "KEPANITIAAN & EVENT",
+    "period": "Periode Event",
+    "position": "Posisi",
+    "button": "Sertifikat"
+  },
+
+  
+  "projectDetail": {
+    "duration": "Durasi",
+    "position": "Posisi di Tim",
+    "description": "Deskripsi",
+    "galery": "Galeri Tampilan"
+  }
+}

@@ -95,6 +95,7 @@ export default function Contact() {
                                         className="w-full h-full object-cover rounded-lg" 
                                         src="./images/8s8sud9d88e5r7fw/IMG_0319.webp" 
                                         alt="Foto 1" 
+                                        loading="lazy"
                                     />
                                 </div>
                                 {/* Foto 2 (Kiri Bawah) */}
@@ -103,6 +104,7 @@ export default function Contact() {
                                         className="w-full h-full object-cover rounded-lg" 
                                         src="./images/8s8sud9d88e5r7fw/IMG_0404.webp" 
                                         alt="Foto 2"
+                                        loading="lazy"
                                     />
                                 </div>
                             </div>
@@ -113,6 +115,7 @@ export default function Contact() {
                                         className="w-full h-full object-cover rounded-lg" 
                                         src="./images/8s8sud9d88e5r7fw/IMG_2192.webp" 
                                         alt="Foto Besar 16:9" 
+                                        loading="lazy"
                                     />
                                 </div>
                             </div>

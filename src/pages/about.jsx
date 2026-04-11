@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next';
 // UI
 import CustomStrokeButton from "../components/ui/strokeButton"
 import ImageVideoTilt from '../components/ui/imageVideoTilt';
@@ -13,6 +14,7 @@ import { TechStack } from '../constants/techStack';
 export default function About() {
     const [activeTech, setActiveTech] = useState("Core Langguage");
     const handleActive = (name) => setActiveTech(name);
+    const { t } = useTranslation();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -44,10 +46,11 @@ export default function About() {
 
                     <div className="flex flex-col w-full gap-8">
                         <h1 className="flex flex-col text-7xl font-bold leading-none text-brand-0">
-                            <span>TENTANG</span>
-                            <span>SAYA</span>
+                            {/* <span>ABOUT</span>
+                            <span>ME</span> */}
+                            {t('about.title')}
                         </h1>
-                        <p className=' text-brand-50 text-justify '>Saya adalah mahasiswa semester 6 jurusan Teknik Informatika di Politeknik Negeri Jember. Saya memiliki pengalaman Fullstack Developer & Designer yang berfokus pada pengalaman pengguna. Memiliki pengalaman dalam membangun aplikasi web modern menggunakan React dan Laravel, serta dalam otomasi sistem melalui IoT dan manajemen database yang efisien., dengan menguasai HTML, CSS, JavaScript, PHP, Python, dan Java.</p>
+                        <p className=' text-brand-50 text-justify '>{t('about.description')}</p>
                     </div>
                 </div>
                 <img className="absolute z-0 aspect-video w-full object-cover bottom-0 left-0 brightness-25" src="https://images.unsplash.com/photo-1648071343677-fac075603d3c?q=80&w=1615&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
@@ -92,7 +95,7 @@ export default function About() {
                             TechStack.filter((item) => item.category === activeTech).map((item)=> (
                                 <div className='w-36 h-auto'>
                                     <div className='w-36 h-auto'>
-                                        <img className='w-full h-full aspect-square object-cover' src={item.imageUrl} alt="" />
+                                        <img className='w-full h-full aspect-square object-cover' src={item.imageUrl} alt="" loading="lazy" />
                                     </div>
                                     <p className='text-brand-1000'>{item.name}</p>
                                 </div>

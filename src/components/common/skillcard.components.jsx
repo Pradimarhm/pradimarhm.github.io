@@ -15,6 +15,7 @@ const SkillCard = ({ name, imageUrl, Description, techStack }) => {
               className="w-10 h-10 shadow-md shadow-black/80 transition-transform duration-300" 
               src={icon} 
               alt={`${name}-icon-${i}`} 
+              loading="lazy" 
             />
           ))}
         </div>
