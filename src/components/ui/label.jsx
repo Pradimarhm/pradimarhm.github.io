@@ -5,7 +5,7 @@ const Label = ({text, variant = "primary"}) => {
         <div
             className={`btn ${buttonStyle} w-fit py-1.5 px-1.5`}
         >
-            <p className="text-lg">{text}</p>
+            <p className="text-sm md:text-md lg:text-lg text-nowrap">{text}</p>
         </div>
     )
 }

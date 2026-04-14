@@ -45,7 +45,7 @@ export default function ProjectDetail() {
     }
 
     return (
-        <div className=' max-w-7xl mx-auto pt-30'>
+        <div className=' max-w-7xl mx-auto pt-8'>
             {/* <Link to="/myProject" className="text-brand-0 mb-8 inline-block bg-brand-500 py-2 px-4 hover:bg-brand-600">
                 ← Kembali ke Project
             </Link>  */}
@@ -61,35 +61,35 @@ export default function ProjectDetail() {
                 </div>
             </section>
 
-            <section className='flex flex-col gap-10 pb-20'>
-                <h1 className='text-7xl font-semibold text-brand-0'>{project.name}</h1>
+            <section className='flex flex-col gap-10 pb-20 px-10 pt-10'>
+                <h1 className='text-5xl md:text-6xl lg:text-7xl font-semibold text-brand-0'>{project.name}</h1>
                 <div className='w-full h-fit flex flex-col gap-10'>
-                    <div className='w-full h-fit flex flex-row gap-5'>
+                    <div className='w-full h-fit flex flex-col lg:flex-row gap-5'>
                         <div className='w-full h-fit flex flex-col gap-5'>
-                            <h2 className='text-3xl font-normal text-brand-0'>{t('projectDetail.duration')}</h2>
+                            <h2 className='text-xl md:text-2xl lg:text-3xl font-normal text-brand-0'>{t('projectDetail.duration')}</h2>
                             {
                                 project.duration.length > 0 ? (
                                     <div className='w-full h-fit flex justify-center p-2 bg-transparent border border-brand-0'>
-                                        <p className='text-lg font-normal text-brand-0'>{project.duration}</p>
+                                        <p className='text-sm md:text-md lg:text-lg font-normal text-brand-0'>{project.duration}</p>
                                     </div>
                                 ) : <div className='w-full h-fit flex justify-center p-2 bg-transparent border border-red-500'>
-                                        <p className='text-red-500'>No Duration</p>
+                                        <p className='text-red-500 text-sm md:text-md lg:text-lg'>No Duration</p>
                                     </div>
                             }
                         </div>
                         
                         <div className='w-full h-fit flex flex-col gap-5'>
-                            <h2 className='text-3xl font-normal text-brand-0'>{t('projectDetail.position')}</h2>
+                            <h2 className='text-xl md:text-2xl lg:text-3xl font-normal text-brand-0'>{t('projectDetail.position')}</h2>
                             <div className='w-full h-fit flex flex-wrap gap-2.5'>
                                 {
                                     project.position_on_team.length > 0 ? (
                                         project.position_on_team.map((item_position)=>(
-                                            <div className='w-fit h-fit py-2 px-4 bg-brand-0 text-lg text-black'>
+                                            <div className='w-fit h-fit py-2 px-4 bg-brand-0 text-sm md:text-md lg:text-lg text-black'>
                                                 <p>{item_position}</p>
                                             </div> 
                                         ))
                                     ) : <div className='w-fit h-fit py-2 px-4 bg-red-50 text-lg text-black'>
-                                            <p className='text-red-500'>No Position</p>
+                                            <p className='text-sm md:text-md lg:text-lg text-red-500'>No Position</p>
                                         </div>
                                 }
                             </div>
@@ -97,8 +97,8 @@ export default function ProjectDetail() {
                     </div>
 
                     <div className='w-full h-fit flex flex-col gap-5'>
-                        <h2 className='text-3xl font-normal text-brand-0'>{t('projectDetail.description')}</h2>
-                        <p className='text-lg font-normal text-brand-100'>
+                        <h2 className='text-xl md:text-2xl lg:text-3xl font-normal text-brand-0'>{t('projectDetail.description')}</h2>
+                        <p className='text-sm md:text-md lg:text-lg font-normal text-brand-100'>
                             {
                                 project.description[lang].length > 0 ? (
                                     project.description[lang]
@@ -108,7 +108,7 @@ export default function ProjectDetail() {
                     </div>
 
                     <div className='w-full h-fit flex flex-col gap-5'>
-                        <h2 className='text-3xl font-normal text-brand-0'>Tech Stack</h2>
+                        <h2 className='text-xl md:text-2xl lg:text-3xl font-normal text-brand-0'>Tech Stack</h2>
                         <div className='w-full h-fit flex flex-wrap gap-5 justify-between'>
                             {
                                 project.techStack.length > 0 ? (
@@ -116,8 +116,8 @@ export default function ProjectDetail() {
                                         <div className='w-xl h-fit flex flex-row gap-2 border'>
                                             <img className='aspect-square w-16' src={item_stack.icon} alt="" loading="lazy" />
                                             <div className='w-full h-fit flex flex-col justify-center'>
-                                                <h3 className='text-xl font-normal text-brand-100'>{item_stack.name}</h3>
-                                                <p className='text-lg font-normal text-brand-200'>{item_stack.describe[lang]}</p>
+                                                <h3 className='text-md md:text-lg lg:text-xl font-normal text-brand-100'>{item_stack.name}</h3>
+                                                <p className='text-sm md:text-md lg:text-lg font-normal text-brand-200'>{item_stack.describe[lang]}</p>
                                             </div>
                                         </div>
                                     ))
@@ -134,9 +134,9 @@ export default function ProjectDetail() {
                     </div>
 
                     <div className='w-full h-fit flex flex-col gap-5'>
-                        <h2 className='text-3xl font-normal text-brand-0'>{t('projectDetail.galery')}</h2>
+                        <h2 className='text-xl md:text-2xl lg:text-3xl font-normal text-brand-0'>{t('projectDetail.galery')}</h2>
                         {galery.length > 0 ? (
-                            <div className='w-full h-fit columns-4 space-y-5 gap-5'>
+                            <div className='w-full h-fit columns-2 md:columns-3 lg:columns-4 space-y-5 gap-5'>
                                 {galery.map((src, index) => (
                                     <div key={index} className="group h-fit relative bg-transparent">
                                         <img 
@@ -151,7 +151,7 @@ export default function ProjectDetail() {
                         ) : (
                             <div className='w-full h-fit flex flex-col items-center'>   
                                 <img className='w-96 filter grayscale opacity-50' src="../ilustration/undraw_empty_4zx0.svg" alt="" />                                 
-                                <p className="text-gray-500 col-span-full text-center py-10">
+                                <p className="text-gray-500 col-span-full text-sm md:text-md lg:text-lg text-center py-10">
                                     Belum ada gambar di folder {project.name.toLowerCase()}
                                 </p>
                             </div>

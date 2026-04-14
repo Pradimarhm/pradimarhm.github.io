@@ -36,9 +36,9 @@ export default function Project() {
         <div className="bg-transparent">
             <div className="max-w-7xl mx-auto">
                 {/* header section */}
-                <section className='flex h-fit pt-20'>
+                <section className='flex h-fit pt-8'>
                     <div className='flex flex-col items-center w-7xl h-fit gap-8 py-8 px-2 sm:px-4 md:px-6 lg:px-10'>
-                        <h1 className='text-7xl font-medium text-brand-0 mb-4 uppercase'>{t('nav.project')}</h1>
+                        <h1 className='text-5xl md:text-6xl lg:text-7xl font-medium text-brand-0 mb-4 uppercase'>{t('nav.project')}</h1>
                         <div className="w-full flex flex-wrap justify-center gap-2.5">
                             {
                                 ProjectCategory.map((item) => (
@@ -56,10 +56,10 @@ export default function Project() {
                 </section>
 
                 <section className='flex w-full mb-10'>
-                    <div className='flex flex-wrap w-full justify-start gap-5 pl-9'>
+                    <div className='flex flex-wrap w-full justify-center gap-5 px-4 sm:px-0'>
                         {filteredProjects.length > 0 ? (
                             filteredProjects.map((item, index) => (
-                                <div key={index} className='flex flex-col w-96 h-fit p-2.5 gap-5 border border-brand-0 bg-black'>
+                                <div key={index} className='flex flex-col w-full sm:w-82 h-fit p-2.5 gap-5 border border-brand-0 bg-black'>
                                     <img className='w-full aspect-square object-cover'  loading="lazy" src={item.imageUrl} alt={item.name} />
                                     <div className='flex flex-col justify-between items-end gap-2.5'>
                                         <h2 className='text-white w-full text-2xl font-semibold flex flex-wrap'>{item.name}</h2>

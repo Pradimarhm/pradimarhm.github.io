@@ -62,8 +62,8 @@ const App = () => {
       {isLoading ? (
         <LoadingScreen />
       ) : (
-        <div className='min-h-screen overflow-x-hidden bg-transparent'>      
-          <Router>
+        <Router>
+          <div className='min-h-screen bg-transparent'>      
             <Navbar/>
             
             <Routes>
@@ -76,26 +76,11 @@ const App = () => {
 
                 <Route path='/myDesign' element={<Design/>} />
             </Routes>
-          </Router>
-        </div>
+          </div>
+        </Router>
+        
       )}
     </>
-
-    // <div className='min-h-screen overflow-x-hidden bg-transparent'>      
-    //   <Router>
-    //     <Navbar/>
-        
-    //     <Routes>
-    //         <Route path='/' element={<Home/>}/>
-    //         <Route path='/contact' element={<ContactMe/>} />
-    //         <Route path='/about' element={<About/>} />
-    //         <Route path='/experience' element={<Experience/>} />
-    //         <Route path='/myProject' element={<Project/>} />
-    //     </Routes>
-    //   </Router>
-
-    //   {/* <Home/>  */}
-    // </div>
   )
 }
 

@@ -43,7 +43,7 @@ const Marque = ({direction = 'left'}) => {
     return(
         <div 
             ref={container}
-            className='w-full overflow-hidden bg-brand-1000 text-brand-100 border-y-2 border-brand-100 text-lg whitespace-nowrap mb-4'
+            className='w-full overflow-hidden bg-brand-1000 text-brand-100 border-y-2 border-brand-100 text-sm md:text-md lg:text-lg whitespace-nowrap mb-4'
         >
             <div ref={slider} className='flex w-fit'>
                 {renderList()}

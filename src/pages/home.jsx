@@ -43,11 +43,11 @@ export default function Home() {
   
   return (
     <div className="bg-transparent w-full flex flex-col justify-center">
-      <section className="flex flex-col pt-40 w-full justify-center items-center">
-        <div className="flex flex-col w-7xl gap-8 px-2 sm:px-4 md:px-6 lg:px-10">
-          <div className=" flex flex-row w-full justify-between gap-4">
+      <section className="flex flex-col pt-8 w-full justify-center items-center">
+        <div className="flex flex-col max-w-7xl gap-8 px-2 sm:px-4 md:px-6 lg:px-10">
+          <div className=" flex flex-col lg:flex-row w-full justify-between gap-4">
             <div className="flex flex-col">
-              <h1 className="flex flex-col text-3xl font-extrabold leading-none sm:text-5xl md:text-7xl lg:text-9xl">
+              <h1 className="flex flex-col text-6xl font-extrabold leading-none sm:text-7xl md:text-8xl lg:text-9xl">
                 <span className="text-transparent [-webkit-text-stroke:1px_var(--color-brand-0)]">
                   {t('hero.greeting')}
                 </span>
@@ -56,7 +56,7 @@ export default function Home() {
                 </span>
               </h1>
               
-              <h2 className='text-white text-4xl font-normal'>PRADITYA IVAN RAHMADHANI</h2>
+              <h2 className='text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal'>PRADITYA IVAN RAHMADHANI</h2>
             </div>
             
             <img 
@@ -67,8 +67,8 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex flex-row gap-4 py-10 items-center">
-            <h3 className='text-white text-2xl font-bold text-end'>{t('hero.cta')}</h3>
+          <div className="flex flex-col md:flex-row gap-4 py-10 items-center">
+            <h3 className='text-white text-2xl font-bold text-start md:text-end'>{t('hero.cta')}</h3>
             <p className='text-sm font-normal text-gray-300'>{t('hero.subtitle')}</p>
           </div>
         </div>
@@ -94,29 +94,29 @@ export default function Home() {
       </section>
 
       {/* SECTION SKILL */}
-      <section className="flex min-h-screen justify-center items-center px-2 sm:px-4 md:px-6 lg:px-10 py-20 bg-brand-1000 ">
-        <div className="flex flex-col w-7xl h-full gap-5">
-          <h2 className="text-brand-0 text-7xl font-medium">{t('skill.title')}</h2>
-            <div className="flex justify-center flex-row gap-4">
-              {
-                skill.map((item) => (
-                  <SkillCard 
-                    name={item.name}
-                    imageUrl={item.imageUrl}
-                    Description={item.Description[lang]}
-                    techStack={item.techStack}
-                  />
-                ))
-              }
-            </div>
-          <h3 className="text-5xl font-medium bg-linear-to-r from-brand-700 to-brand-800 bg-clip-text text-transparent text-end">{t('skill.subtitle')}</h3>
+      <section className="flex min-h-screen justify-center items-center px-2 scroll-smooth sm:px-4 md:px-6 lg:px-10 py-20 bg-brand-1000 ">
+        <div className="flex flex-col w-full h-full justify-center items-center gap-5">
+          <h2 className="text-brand-0 w-full text-5xl md:text-6xl lg:text-7xl font-medium">{t('skill.title')}</h2>
+          <div className="w-full flex justify-start lg:justify-center flex-row gap-4 flex-nowrap overflow-x-auto pb-2">
+            {
+              skill.map((item) => (
+                <SkillCard 
+                  name={item.name}
+                  imageUrl={item.imageUrl}
+                  Description={item.Description[lang]}
+                  techStack={item.techStack}
+                />
+              ))
+            }
+          </div>
+          <h3 className="w-full text-3xl md:text-4xl lg:text-5xl font-medium bg-linear-to-r from-brand-700 to-brand-800 bg-clip-text text-transparent text-end">{t('skill.subtitle')}</h3>
         </div>
       </section>
 
       {/* best project */}
       <section className="flex min-h-screen justify-center items-center px-2 sm:px-4 md:px-6 lg:px-10 bg-brand-1000">
-        <div className="w-7xl">
-          <h2 className="text-7xl font-medium text-brand-0 mb-4">{t('bestProject.title')}</h2>
+        <div className="max-w-7xl">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-medium text-brand-0 mb-4">{t('bestProject.title')}</h2>
 
           {
                 bestProject.map((bp)=> (
@@ -137,7 +137,7 @@ export default function Home() {
       <section className="bg-brand-950 flex justify-center px-2 sm:px-4 md:px-6 lg:px-10 py-10">
         <div className="w-7xl">
           <div className="relative mb-5">
-            <div className="relative z-20 aspect-video p-4 w-full text-brand-0 text-7xl font-bold flex flex-col justify-between">
+            <div className="relative z-20 aspect-video p-4 w-full text-brand-0 text-3xl md:text-5xl lg:text-7xl font-bold flex flex-col justify-between">
               <h2>{t('bestDesign.title')}</h2>
               <h3 className="text-end">2025</h3>
             </div>
@@ -154,7 +154,7 @@ export default function Home() {
               <img className="w-full h-fit" src={"../assets/images/bestDesign/carousaleReor.webp"} alt="" />
             </div> */}
             <div className="flex flex-row w-full h-fit gap-5">
-              <div className="w-full h-fit columns-4 space-y-5 gap-5 justify-start pl-5">
+              <div className="w-full h-fit columns-2 md:columns-3 lg:columns-4 space-y-5 gap-5 justify-start">
                 {
                   galery.map((item, index)=> (
                     <div key={index} className="group h-fit relative bg-transparent">

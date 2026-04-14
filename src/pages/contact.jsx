@@ -82,9 +82,9 @@ export default function Contact() {
                 </Alert>
             </Snackbar>
             <div className='max-w-7xl mx-auto'>
-                <section className='flex flex-row gap-8 pt-32 px-2 sm:px-4 md:px-6 lg:px-10 pb-10'>
+                <section className='flex flex-col lg:flex-row gap-8 pt-8 px-2 sm:px-4 md:px-6 lg:px-10 pb-10'>
                     <div className='w-full h-fit'>
-                        <h3 className='lg:text-7xl leading-none font-bold pr-32 mb-2 bg-linear-to-r from-brand-700 to-brand-500 bg-clip-text text-transparent md:text-7xl sm:text-5xl text-3xl'>ANY ASK FOR ME?</h3>
+                        <h3 className='text-5xl md:text-6xl lg:text-7xl leading-none font-bold pr-32 mb-2 bg-linear-to-r from-brand-700 to-brand-500 bg-clip-text text-transparent'>ANY ASK FOR ME?</h3>
                         
                         <div className="grid grid-cols-12 gap-3 w-full">
                             {/* Kolom Kiri: Menampung 2 Foto Kecil secara Vertikal */}
@@ -187,9 +187,9 @@ export default function Contact() {
                 </section>
 
                 <section className='w-full flex flex-col min-h-screen gap-8 pt-8 px-2 sm:px-4 md:px-6 lg:px-10 pb-10'>
-                    <h3 className='text-5xl font-normal text-brand-0'>MY CONTACT</h3>
+                    <h3 className='text-3xl md:text-4xl lg:text-5xl font-normal text-brand-0'>MY CONTACT</h3>
                     
-                    <div className="w-full grid grid-cols-2 grid-rows-3 gap-4 text-brand-0">
+                    <div className="w-full flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:grid-rows-3 text-brand-0">
                         <div className='w-full flex flex-row gap-4 p-2.5 bg-gray-900'>
                             <img className='p-2.5' src="../icon/instagram.svg" alt="" />
                             <div className='flex flex-col h-full justify-center'>
@@ -219,7 +219,7 @@ export default function Contact() {
                             </div>
                         </div>
                         <div className='w-full flex flex-row gap-4 p-2.5 bg-gray-900'>
-                            <img className='p-2.5' src="../icon/email.svg" alt="" />
+                            <img className='h-16 w-fit object-cover' src="../icon/email.svg" alt="" />
                             <div className='flex flex-col justify-center'>
                                 <h4 className='text-lg text-brand-50'>Email</h4>
                                 <a href='mailto:pradanaivan574@gmail.com' target='_blank'>pradanaivan574@gmail.com</a>

@@ -17,7 +17,7 @@ const LangguageButton = () => {
 
     return (
         <button
-            className={`w-full h-full px-2 flex flex-row justify-center items-center rounded-full gap-2 btn bg-none border border-brand-1000 text-brand-1000 hover:bg-brand-1000 hover:text-brand-0 duration-300 py-2 cursor-pointer`}
+            className={`w-fit h-full px-2 flex flex-row justify-center items-center rounded-full gap-2 btn bg-none border border-brand-1000 text-brand-1000 hover:bg-brand-1000 hover:text-brand-0 duration-300 py-2 cursor-pointer`}
             onClick={toggle}
         >
             <p className='ml-2.5 font-normal text-sm'>{isID ? 'ID' : 'EN'}</p>

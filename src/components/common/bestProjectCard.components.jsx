@@ -8,7 +8,7 @@ import CustomButtonUrl from '../ui/buttonUrl';
 
 const BestProjectCard = ({title, description, mainImageUrl, image1Url, image2Url, toolTech}) => {
     return (
-        <div className='flex flex-row w-full h-fit gap-2.5'>
+        <div className='flex flex-col lg:flex-row w-full h-fit gap-2.5'>
             
             <div className='flex flex-row w-full gap-2.5'>
                     <MainImageTilt
@@ -26,18 +26,18 @@ const BestProjectCard = ({title, description, mainImageUrl, image1Url, image2Url
             
             <div className='flex flex-col gap-5 w-full'>
                 <div className="flex flex-col gap-5 w-full p-4 border border-brand-0">
-                    <h3 className="text-5xl font-bold text-brand-0">{title}</h3>
-                    <p className="text-lg font-normal text-brand-50 ml-8">{description}</p>
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-0">{title}</h3>
+                    <p className="text-sm md:text-md lg:text-lg font-normal text-brand-50 ml-8">{description}</p>
                     
                     
-                    <div className="flex flex-row gap-4">
+                    <div className="flex flex-row flex-wrap gap-4">
                         {toolTech.map((icon, i)=> (
                             <img key={i} className="w-10 h-10 shadow-md shadow-black/80 transition-transform duration-300" src={icon} alt={icon-{i}} />
                         ))}
                     </div>
                 </div>
                 <Link
-                    className='w-full h-fit flex justify-center p-2 bg-brand-500 text-brand-0 hover:bg-brand-600 duration-300'
+                    className='w-full h-fit flex text-sm md:text-md lg:text-lg justify-center p-2 bg-brand-500 text-brand-0 hover:bg-brand-600 duration-300'
                     to={'/myProject'}
                 >
                     Lihat Project Lainnya

@@ -4,7 +4,7 @@ import { InstagramIcon, Linkedin, TiktokIcon, Email, WhatsappIcon } from '@hugei
 const Footer = () => {
     return (
         <footer className="bg-brand-0">
-            <div className="flex flex-row justify-between py-4 px-10">
+            <div className="flex flex-col md:flex-row items-center gap-2 justify-between py-4 px-10">
                 <a className="text-lg font-normal text-black" href="#">Praditya Ivan Rahmadhani</a>
 
                 <div className='flex flex-row gap-2.5'>

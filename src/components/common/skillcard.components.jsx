@@ -2,7 +2,7 @@ import React from 'react';
 
 const SkillCard = ({ name, imageUrl, Description, techStack }) => {
   return (
-    <div className="bg-neutral-primary-soft block w-80 h-fit max-w-sm p-4 border border-brand-0 bg-brand-1000 hover:bg-brand-50/15 hover:shadow-lg/50 hover:shadow-brand-50 duration-500 group">
+    <div className="bg-neutral-primary-soft shrink-0 block w-80 h-fit max-w-sm p-4 border border-brand-0 bg-brand-1000 hover:bg-brand-50/15 hover:shadow-lg/50 hover:shadow-brand-50 duration-500 group">
       <img className="w-full h-auto mb-1.5" src={imageUrl} alt={name} loading="lazy" />
 
       <div className="flex flex-col gap-2.5">

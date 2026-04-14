@@ -47,9 +47,9 @@ export default function Design() {
     return (
         <div className="bg-transparent">   
             <div className="max-w-7xl min-h-screen mx-auto">
-                <section className='flex h-fit pt-20'>
+                <section className='flex h-fit'>
                     <div className='flex flex-col items-center w-7xl h-fit gap-8 py-8 px-2 sm:px-4 md:px-6 lg:px-10'>
-                        <h1 className='text-7xl font-medium text-brand-0 mb-4 uppercase'>{t('nav.design')}</h1>
+                        <h1 className='text-5xl md:text-6xl lg:text-7xl font-medium text-brand-0 mb-4 uppercase'>{t('nav.design')}</h1>
                         <div className="w-full flex flex-wrap justify-center gap-2.5">
                             {
                                 DesignCategory.map((item) => (
@@ -70,7 +70,7 @@ export default function Design() {
                     <div className='flex flex-wrap w-full justify-start gap-5'>
                         {
                             filteredDesign.length > 0 ? (
-                                <div className='w-full h-fit columns-4 space-y-5 gap-5'>
+                                <div className='w-full h-fit columns-2 md:columns-3 lg:columns-4 space-y-5 gap-3 md:gap-4 lg:gap-5 px-3 md:px-3 lg:px-0'>
                                     {filteredDesign.map((src, index) => (
                                         <div key={index} className="group h-fit relative bg-transparent">
                                             <img 

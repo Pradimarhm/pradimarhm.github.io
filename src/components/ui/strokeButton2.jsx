@@ -6,7 +6,7 @@ const CustomStrokeButton2 = ({label, onClick, type = "button", variant = true}) 
     return (
         <button
             type={type}
-            className={`btn  ${buttonStyle} w-fit py-2 px-4 cursor-pointer`}
+            className={`btn  ${buttonStyle} w-fit py-2 px-4 text-sm md:text-md cursor-pointer`}
             onClick={onClick}
         >
             {label}
